@@ -1,0 +1,9 @@
+services:
+  lab-env:
+    build: .
+    ports:
+      - "8888:8888" # Voor Jupyter Notebook
+      - "5151:5151" # Voor de FiftyOne app
+    volumes:
+      - .:/workspace # Mount je huidige map zodat je live bij je datasets en scripts kunt
+    working_dir: /workspace
